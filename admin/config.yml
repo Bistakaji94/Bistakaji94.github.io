@@ -1,0 +1,110 @@
+backend:
+  name: github
+  repo: Bistakaji94/Bistakaji94.github.io
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+site_url: "https://bistakaji94.github.io"
+logo_url: "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=200"
+
+collections:
+  - name: "website"
+    label: "Website Content"
+    files:
+      - name: "profile"
+        label: "Personal Information"
+        file: "content/data.json"
+        format: "json"
+        fields:
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Full name", name: "name", widget: "string" }
+              - { label: "Online nickname", name: "nickname", widget: "string" }
+              - { label: "Homepage headline", name: "tagline", widget: "string" }
+              - { label: "Homepage introduction", name: "intro", widget: "text" }
+              - { label: "Email address", name: "email", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Portrait photo", name: "portrait", widget: "image" }
+              - { label: "Homepage background image", name: "heroImage", widget: "image" }
+              - { label: "GitHub link", name: "github", widget: "string", required: false }
+              - { label: "LinkedIn link", name: "linkedin", widget: "string", required: false }
+              - { label: "YouTube link", name: "youtube", widget: "string", required: false }
+              - { label: "ResearchGate link", name: "researchgate", widget: "string", required: false }
+
+      - name: "research"
+        label: "Research Projects"
+        file: "content/data.json"
+        format: "json"
+        fields:
+          - label: "Research projects"
+            name: "research"
+            widget: "list"
+            fields:
+              - { label: "Project title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["gis", "hydrology", "hazards"]
+              - { label: "Project image", name: "image", widget: "image", required: false }
+              - { label: "Image caption", name: "imageCaption", widget: "string", required: false }
+              - { label: "Short summary", name: "summary", widget: "text" }
+              - { label: "Methods", name: "methods", widget: "text" }
+              - { label: "Outcome", name: "outcome", widget: "text" }
+
+      - name: "posts"
+        label: "Field Notes and Blog"
+        file: "content/data.json"
+        format: "json"
+        fields:
+          - label: "Blog posts"
+            name: "posts"
+            widget: "list"
+            fields:
+              - { label: "Post title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["trekking", "research", "landscape"]
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Featured image", name: "image", widget: "image", required: false }
+              - { label: "Image caption", name: "imageCaption", widget: "string", required: false }
+              - { label: "Post text", name: "body", widget: "text" }
+
+      - name: "videos"
+        label: "Vlogs and Videos"
+        file: "content/data.json"
+        format: "json"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Video title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Thumbnail image", name: "image", widget: "image", required: false }
+              - { label: "Thumbnail caption", name: "imageCaption", widget: "string", required: false }
+              - { label: "YouTube or Vimeo link", name: "url", widget: "string", required: false }
+
+      - name: "gallery"
+        label: "Photo Albums"
+        file: "content/data.json"
+        format: "json"
+        fields:
+          - label: "Photo albums"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Album title", name: "title", widget: "string" }
+              - { label: "Album description", name: "description", widget: "text", required: false }
+              - { label: "Album cover image", name: "cover", widget: "image", required: false }
+              - { label: "Cover image caption", name: "coverCaption", widget: "string", required: false }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Photo", name: "image", widget: "image" }
+                  - { label: "Photo caption", name: "caption", widget: "string", required: false }

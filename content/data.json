@@ -1,0 +1,105 @@
+{
+  "profile": {
+    "name": "Ratna Bahadur Bista",
+    "nickname": "BistaKaji",
+    "tagline": "Mountains, maps, mathematics, and clear explanation.",
+    "intro": "I am a Mathematics and Physics tutor, GIS analyst, and MSc Mountain and Mountaineering Science student. My work explores Himalayan hazards, rivers, and landscapes while helping students build genuine confidence in mathematics.",
+    "email": "your.email@example.com",
+    "location": "Patan, Bagmati Province, Nepal",
+    "portrait": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiking_in_the_Himalayas.jpg?width=1200",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1600",
+    "linkedin": "",
+    "github": "https://github.com/Bistakaji94",
+    "youtube": "",
+    "researchgate": ""
+  },
+  "research": [
+    {
+      "title": "Flood Susceptibility Mapping of Lalitpur District",
+      "category": "gis",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2026_Nepal_floods_map.svg?width=1200",
+      "imageCaption": "Illustrative flood-susceptibility map placeholder.",
+      "summary": "A GIS-based AHP/MCDA study combining terrain, rainfall, drainage, land cover, and hydrological indicators.",
+      "methods": "QGIS, DEM terrain analysis, raster normalisation, AHP, MCDA, land-cover analysis, drainage analysis, and map classification.",
+      "outcome": "A classified flood-susceptibility surface identifying relatively higher-risk areas for preliminary planning attention."
+    },
+    {
+      "title": "Rasuwa–Bhotekoshi Flood Event, August 2026",
+      "category": "hazards",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Nepal.jpg?width=1200",
+      "imageCaption": "High-mountain landscape placeholder for the Rasuwa–Bhotekoshi study area.",
+      "summary": "Research on slope instability, debris flows, permafrost, and cascade hazards behind the August 2026 flood.",
+      "methods": "Literature synthesis, event chronology, geospatial context, and critical evaluation of evidence.",
+      "outcome": "A cause-focused analysis distinguishing established mechanisms from unresolved hypotheses."
+    },
+    {
+      "title": "River-Basin Hydrology in Nepal",
+      "category": "hydrology",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_view_of_the_Himalayan_river_valley_and_mountain_settlement.jpg?width=1200",
+      "imageCaption": "Himalayan river-valley placeholder for basin hydrology research.",
+      "summary": "Comparative analysis of discharge, glacial melt, monsoon precipitation, and seasonal water availability.",
+      "methods": "Comparative basin analysis using hydrological and climate data.",
+      "outcome": "Insight into how mountain processes influence downstream river systems."
+    }
+  ],
+  "posts": [
+    {
+      "title": "What a trail teaches about terrain",
+      "category": "trekking",
+      "date": "2026-11-01",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/One_of_many_footbridges_along_the_trail,_Nepal,_trek.jpg?width=1200",
+      "imageCaption": "A footbridge along a Nepal trekking trail.",
+      "body": "A trail is more than a route between places. It reveals slope stability, drainage patterns, settlement choices, and the practical decisions people make to live with steep and dynamic terrain."
+    },
+    {
+      "title": "Seeing flood risk before the water arrives",
+      "category": "research",
+      "date": "2026-11-02",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2026_Nepal_floods_map.svg?width=1200",
+      "imageCaption": "Illustrative flood map used as a placeholder.",
+      "body": "Flood susceptibility mapping does not predict a specific flood. Instead, it helps identify where terrain, drainage, rainfall, and land cover combine to make flooding more likely."
+    },
+    {
+      "title": "Rivers, ice, and the memory of mountains",
+      "category": "landscape",
+      "date": "2026-11-03",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_view_of_the_Himalayan_river_valley_and_mountain_settlement.jpg?width=1200",
+      "imageCaption": "A Himalayan river valley and mountain settlement.",
+      "body": "Himalayan rivers carry a record of altitude, glacier melt, monsoon rainfall, and geological change."
+    }
+  ],
+  "videos": [
+    {
+      "title": "Trekking in the Nepal Himalaya",
+      "description": "A short visual story from a mountain trail.",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+      "imageCaption": "Himalayan peaks near Ama Dablam, Nepal.",
+      "url": ""
+    },
+    {
+      "title": "Reading a river valley",
+      "description": "A field-style explainer on rivers, slopes, settlements, and sediment.",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_view_of_the_Himalayan_river_valley_and_mountain_settlement.jpg?width=1200",
+      "imageCaption": "A river valley in the Nepal Himalaya.",
+      "url": ""
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Mountain Landscapes",
+      "description": "Photographs from treks, valleys, and high mountain environments.",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+      "coverCaption": "Himalayan peaks near Ama Dablam, Nepal.",
+      "images": [
+        {
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+          "caption": "Himalayan peaks near Ama Dablam, Nepal."
+        },
+        {
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trekking_Trail_and_Beautiful_Himalayas_seen_at_Mustang,Nepal.jpg?width=1200",
+          "caption": "Trekking trail in Mustang, Nepal."
+        }
+      ]
+    }
+  ]
+}
