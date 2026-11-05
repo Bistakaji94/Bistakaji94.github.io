@@ -120,3 +120,64 @@ label { font-weight: 650; font-size: .93rem; }
   .nav-toggle { display: block; }
   .portrait img { height: 320px; }
 }
+
+/* ---------- Gallery cover ---------- */
+.gallery-cover {
+  width: 100%;
+  max-width: 760px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: zoom-in;
+  margin: 0 auto;
+}
+
+/* ---------- Gallery lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(8, 15, 13, 0.9);
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: min(1000px, 100%);
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 14px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.lightbox figcaption {
+  margin-top: 12px;
+  color: #d9e5e1;
+  font-size: 0.95rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #141b22;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
