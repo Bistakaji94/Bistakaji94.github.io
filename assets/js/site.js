@@ -226,14 +226,33 @@ function convertVideoUrl(url) {
   return "";
 }
 
+let galleryImages = [];
+let currentGalleryImage = 0;
+
 function renderGallery(albums) {
   const container = document.getElementById("gallery-list");
 
   if (!container) return;
 
+  galleryImages = [];
+
   container.innerHTML = albums
-    .map(
-      (album) => `
+    .map(function (album) {
+      const albumPhotos = [
+        {
+          image: album.cover,
+          caption: album.coverCaption || album.title
+        }
+      ].concat(album.images || []);
+
+      albumPhotos.forEach(function (photo) {
+        galleryImages.push({
+          src: photo.image || PLACEHOLDER_IMAGE,
+          caption: photo.caption || album.title
+        });
+      });
+
+      return `
         <section class="album reveal">
           <h2>${album.title}</h2>
           <p class="muted">${album.description || ""}</p>
@@ -242,34 +261,78 @@ function renderGallery(albums) {
             class="gallery-cover"
             src="${album.cover || PLACEHOLDER_IMAGE}"
             alt="${album.title}"
-            data-full="${album.cover || PLACEHOLDER_IMAGE}"
+            data-index="${galleryImages.length - albumPhotos.length}"
           >
           <p class="caption">${album.coverCaption || ""}</p>
 
           <div class="album-grid">
             ${
               (album.images || [])
-                .map(
-                  (photo) => `
+                .map(function (photo, photoIndex) {
+                  const imageIndex =
+                    galleryImages.length - albumPhotos.length + 1 + photoIndex;
+
+                  return `
                     <figure class="album-image">
                       <img
                         src="${photo.image || PLACEHOLDER_IMAGE}"
                         alt="${photo.caption || album.title}"
-                        data-full="${photo.image || PLACEHOLDER_IMAGE}"
+                        data-index="${imageIndex}"
                       >
                       <figcaption class="caption">
                         ${photo.caption || ""}
                       </figcaption>
-                    </figure>`
-                )
+                    </figure>`;
+                })
                 .join("")
             }
           </div>
-        </section>`
-    )
+        </section>`;
+    })
     .join("");
 
-  setupGalleryLightbox();
+  setupGalleryViewer();
+}
+
+function setupGalleryViewer() {
+  const images = document.querySelectorAll("#gallery-list img[data-index]");
+
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      openGalleryViewer(Number(image.dataset.index));
+    });
+  });
+}
+
+function openGalleryViewer(index) {
+  currentGalleryImage = index;
+  updateGalleryViewer();
+  document.getElementById("gallery-lightbox").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function updateGalleryViewer() {
+  const image = galleryImages[currentGalleryImage];
+
+  document.getElementById("gallery-lightbox-image").src = image.src;
+  document.getElementById("gallery-lightbox-caption").textContent =
+    image.caption;
+}
+
+function nextGalleryImage() {
+  currentGalleryImage = (currentGalleryImage + 1) % galleryImages.length;
+  updateGalleryViewer();
+}
+
+function previousGalleryImage() {
+  currentGalleryImage =
+    (currentGalleryImage - 1 + galleryImages.length) % galleryImages.length;
+  updateGalleryViewer();
+}
+
+function closeGalleryViewer() {
+  document.getElementById("gallery-lightbox").classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 function setupGalleryLightbox() {
