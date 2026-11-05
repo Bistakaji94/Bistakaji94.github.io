@@ -164,17 +164,25 @@ function renderVideos(items) {
     .map(
       (item) => `
         <article class="card video-card reveal">
-          <img src="${item.image || PLACEHOLDER_IMAGE}" alt="${item.title}">
-          <div class="play">&#9654;</div>
+          ${
+            item.url
+              ? `<a href="${item.url}" target="_blank" rel="noopener">`
+              : "<div>"
+          }
+            <img src="${item.image || PLACEHOLDER_IMAGE}" alt="${item.title}">
+            <div class="play">&#9654;</div>
+          ${item.url ? "</a>" : "</div>"}
+
           <div class="card-body">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <img src="${item.image || PLACEHOLDER_IMAGE}" alt="${item.title}"
-              style="border-radius: 14px; margin: 14px 0 0;">
-            <p class="caption">${item.imageCaption || ""}</p>
+
             ${
               item.url
-                ? `<a href="${item.url}" target="_blank" rel="noopener">Watch video &rarr;</a>`
+                ? `<a class="btn btn-outline" href="${item.url}"
+                    target="_blank" rel="noopener">
+                    Watch video &rarr;
+                  </a>`
                 : `<p class="muted">Video link coming soon.</p>`
             }
           </div>
@@ -195,8 +203,12 @@ function renderGallery(albums) {
           <h2>${album.title}</h2>
           <p class="muted">${album.description || ""}</p>
 
-          <img src="${album.cover || PLACEHOLDER_IMAGE}" alt="${album.title}"
-            style="border-radius: 16px; width: 100%; max-height: 430px; object-fit: cover;">
+          <img
+            class="gallery-cover"
+            src="${album.cover || PLACEHOLDER_IMAGE}"
+            alt="${album.title}"
+            data-full="${album.cover || PLACEHOLDER_IMAGE}"
+          >
           <p class="caption">${album.coverCaption || ""}</p>
 
           <div class="album-grid">
@@ -205,9 +217,14 @@ function renderGallery(albums) {
                 .map(
                   (photo) => `
                     <figure class="album-image">
-                      <img src="${photo.image || PLACEHOLDER_IMAGE}"
-                        alt="${photo.caption || album.title}">
-                      <figcaption class="caption">${photo.caption || ""}</figcaption>
+                      <img
+                        src="${photo.image || PLACEHOLDER_IMAGE}"
+                        alt="${photo.caption || album.title}"
+                        data-full="${photo.image || PLACEHOLDER_IMAGE}"
+                      >
+                      <figcaption class="caption">
+                        ${photo.caption || ""}
+                      </figcaption>
                     </figure>`
                 )
                 .join("")
@@ -216,6 +233,36 @@ function renderGallery(albums) {
         </section>`
     )
     .join("");
+
+  setupGalleryLightbox();
+}
+
+function setupGalleryLightbox() {
+  const images = document.querySelectorAll(
+    "#gallery-list img[data-full]"
+  );
+
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      openLightbox(image.dataset.full, image.alt);
+    });
+  });
+}
+
+function openLightbox(imageSource, caption) {
+  const lightbox = document.getElementById("lightbox");
+
+  document.getElementById("lightbox-image").src = imageSource;
+  document.getElementById("lightbox-caption").textContent = caption || "";
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 loadContent()
