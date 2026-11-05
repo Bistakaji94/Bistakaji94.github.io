@@ -1,32 +1,48 @@
 {
-  "gallery": [
+  "videos": [
     {
-      "title": "Mountain Landscapes",
-      "description": "Photographs from treks, valleys, and high mountain environments.",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
-      "coverCaption": "Himalayan peaks near Ama Dablam, Nepal.",
-      "images": [
-        {
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
-          "caption": "Himalayan peaks near Ama Dablam, Nepal."
-        },
-        {
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trekking_Trail_and_Beautiful_Himalayas_seen_at_Mustang,Nepal.jpg?width=1200",
-          "caption": "Trekking trail in Mustang, Nepal."
-        }
-      ]
+      "title": "Trekking in the Nepal Himalaya",
+      "description": "A short visual story from a mountain trail.",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+      "imageCaption": "Himalayan peaks near Ama Dablam, Nepal.",
+      "url": "https://www.youtube.com/watch?v=MVuX0FrR-hA&list=RDMVuX0FrR-hA&start_radio=1&pp=oAcB"
     },
     {
-      "title": "trekking",
-      "description": "EBC",
-      "cover": "",
-      "coverCaption": "",
+      "title": "Reading a river valley",
+      "description": "A field-style explainer on rivers, slopes, settlements, and sediment.",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_view_of_the_Himalayan_river_valley_and_mountain_settlement.jpg?width=1200",
+      "imageCaption": "A river valley in the Nepal Himalaya.",
+      "url": ""
+    }
+  ],
+  "gallery": [
+    {
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+      "coverCaption": "Himalayan peaks near Ama Dablam, Nepal.",
+      "description": "Photographs from treks, valleys, and high mountain environments.",
       "images": [
         {
-          "image": "/images/dahachowk.jpg",
-          "caption": "dach"
+          "caption": "Himalayan peaks near Ama Dablam, Nepal.",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200"
+        },
+        {
+          "caption": "Trekking trail in Mustang, Nepal.",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trekking_Trail_and_Beautiful_Himalayas_seen_at_Mustang,Nepal.jpg?width=1200"
         }
-      ]
+      ],
+      "title": "Mountain Landscapes"
+    },
+    {
+      "cover": "",
+      "coverCaption": "",
+      "description": "EBC",
+      "images": [
+        {
+          "caption": "dach",
+          "image": "/images/dahachowk.jpg"
+        }
+      ],
+      "title": "trekking"
     }
   ],
   "posts": [
@@ -96,22 +112,6 @@
       "outcome": "Insight into how mountain processes influence downstream river systems.",
       "summary": "Comparative analysis of discharge, glacial melt, monsoon precipitation, and seasonal water availability.",
       "title": "River-Basin Hydrology in Nepal"
-    }
-  ],
-  "videos": [
-    {
-      "description": "A short visual story from a mountain trail.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
-      "imageCaption": "Himalayan peaks near Ama Dablam, Nepal.",
-      "title": "Trekking in the Nepal Himalaya",
-      "url": ""
-    },
-    {
-      "description": "A field-style explainer on rivers, slopes, settlements, and sediment.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_view_of_the_Himalayan_river_valley_and_mountain_settlement.jpg?width=1200",
-      "imageCaption": "A river valley in the Nepal Himalaya.",
-      "title": "Reading a river valley",
-      "url": ""
     }
   ]
 }
