@@ -132,7 +132,7 @@ label { font-weight: 650; font-size: .93rem; }
   margin: 0 auto;
 }
 
-/* ---------- Gallery lightbox ---------- */
+/* ---------- Gallery viewer ---------- */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -141,7 +141,7 @@ label { font-weight: 650; font-size: .93rem; }
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(8, 15, 13, 0.9);
+  background: rgba(8, 15, 13, 0.92);
 }
 
 .lightbox.open {
@@ -156,7 +156,7 @@ label { font-weight: 650; font-size: .93rem; }
 
 .lightbox img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 78vh;
   border-radius: 14px;
   object-fit: contain;
   background: #fff;
@@ -165,7 +165,6 @@ label { font-weight: 650; font-size: .93rem; }
 .lightbox figcaption {
   margin-top: 12px;
   color: #d9e5e1;
-  font-size: 0.95rem;
 }
 
 .lightbox-close {
@@ -180,6 +179,38 @@ label { font-weight: 650; font-size: .93rem; }
   color: #141b22;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #141b22;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.lightbox-arrow.left {
+  left: 24px;
+}
+
+.lightbox-arrow.right {
+  right: 24px;
+}
+
+.gallery-cover {
+  width: 100%;
+  max-width: 760px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: zoom-in;
+  margin: 0 auto;
 }
 
 /* ---------- Embedded video ---------- */
