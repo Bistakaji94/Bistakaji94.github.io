@@ -65,6 +65,17 @@ function setupRevealAnimations() {
 }
 
 function setupModals() {
+   
+  const lightbox = document.getElementById("lightbox");
+
+  if (lightbox) {
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+   
   document.querySelectorAll("[data-modal]").forEach(function (button) {
     button.onclick = function () {
       const modal = document.getElementById(button.dataset.modal);
