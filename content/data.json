@@ -1,34 +1,32 @@
 {
-  "profile": {
-    "name": "Bista Kaji",
-    "nickname": "BistaKaji",
-    "tagline": "Mountains, maps, mathematics, and clear explanation.",
-    "intro": "I am a Mathematics and Physics tutor, GIS analyst, and MSc Mountain and Mountaineering Science student. My work explores Himalayan hazards, rivers, and landscapes while helping students build genuine confidence in mathematics.",
-    "email": "bistakaji@example.com",
-    "location": "Patan, Bagmati Province, Nepal",
-    "portrait": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiking_in_the_Himalayas.jpg?width=1200",
-    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1600",
-    "github": "https://github.com/Bistakaji94",
-    "linkedin": "",
-    "youtube": "",
-    "researchgate": ""
-  },
   "gallery": [
     {
+      "title": "Mountain Landscapes",
+      "description": "Photographs from treks, valleys, and high mountain environments.",
       "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
       "coverCaption": "Himalayan peaks near Ama Dablam, Nepal.",
-      "description": "Photographs from treks, valleys, and high mountain environments.",
       "images": [
         {
-          "caption": "Himalayan peaks near Ama Dablam, Nepal.",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200"
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1200",
+          "caption": "Himalayan peaks near Ama Dablam, Nepal."
         },
         {
-          "caption": "Trekking trail in Mustang, Nepal.",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trekking_Trail_and_Beautiful_Himalayas_seen_at_Mustang,Nepal.jpg?width=1200"
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trekking_Trail_and_Beautiful_Himalayas_seen_at_Mustang,Nepal.jpg?width=1200",
+          "caption": "Trekking trail in Mustang, Nepal."
         }
-      ],
-      "title": "Mountain Landscapes"
+      ]
+    },
+    {
+      "title": "trekking",
+      "description": "EBC",
+      "cover": "",
+      "coverCaption": "",
+      "images": [
+        {
+          "image": "/images/dahachowk.jpg",
+          "caption": "dach"
+        }
+      ]
     }
   ],
   "posts": [
@@ -57,6 +55,20 @@
       "title": "Rivers, ice, and the memory of mountains"
     }
   ],
+  "profile": {
+    "email": "bistakaji@example.com",
+    "github": "https://github.com/Bistakaji94",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas,_Ama_Dablam,_Nepal.jpg?width=1600",
+    "intro": "I am a Mathematics and Physics tutor, GIS analyst, and MSc Mountain and Mountaineering Science student. My work explores Himalayan hazards, rivers, and landscapes while helping students build genuine confidence in mathematics.",
+    "linkedin": "",
+    "location": "Patan, Bagmati Province, Nepal",
+    "name": "Bista Kaji",
+    "nickname": "BistaKaji",
+    "portrait": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiking_in_the_Himalayas.jpg?width=1200",
+    "researchgate": "",
+    "tagline": "Mountains, maps, mathematics, and clear explanation.",
+    "youtube": ""
+  },
   "research": [
     {
       "category": "gis",
