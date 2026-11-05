@@ -6,6 +6,24 @@ document.addEventListener("DOMContentLoaded", initialiseInterface);
 document.addEventListener("content:loaded", initialiseInterface);
 
 function initialiseInterface() {
+
+     document.addEventListener("keydown", function (event) {
+    const viewer = document.getElementById("gallery-lightbox");
+
+    if (!viewer || !viewer.classList.contains("open")) return;
+
+    if (event.key === "ArrowRight") {
+      nextGalleryImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+      previousGalleryImage();
+    }
+
+    if (event.key === "Escape") {
+      closeGalleryViewer();
+    }
+  });
   setupMobileNavigation();
   setupFilters();
   setupRevealAnimations();
