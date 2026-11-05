@@ -181,3 +181,19 @@ label { font-weight: 650; font-size: .93rem; }
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* ---------- Embedded video ---------- */
+.video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
