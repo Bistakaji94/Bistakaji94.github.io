@@ -72,7 +72,43 @@
       <figcaption id="lightbox-caption"></figcaption>
     </figure>
   </div>
+  <div class="lightbox" id="gallery-lightbox">
+    <button
+      class="lightbox-close"
+      type="button"
+      onclick="closeGalleryViewer()"
+    >
+      &times;
+    </button>
 
+    <button
+      class="lightbox-arrow left"
+      type="button"
+      onclick="previousGalleryImage()"
+      aria-label="Previous image"
+    >
+      &#10094;
+    </button>
+
+    <figure>
+      <img
+        id="gallery-lightbox-image"
+        src=""
+        alt="Gallery image"
+      >
+      <figcaption id="gallery-lightbox-caption"></figcaption>
+    </figure>
+
+    <button
+      class="lightbox-arrow right"
+      type="button"
+      onclick="nextGalleryImage()"
+      aria-label="Next image"
+    >
+      &#10095;
+    </button>
+  </div>
+    
   </main>
 
   <footer class="site-footer">
