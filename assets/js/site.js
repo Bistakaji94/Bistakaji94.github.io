@@ -161,34 +161,69 @@ function renderVideos(items) {
   if (!container) return;
 
   container.innerHTML = items
-    .map(
-      (item) => `
+    .map(function (item) {
+      const embedUrl = convertVideoUrl(item.url);
+
+      return `
         <article class="card video-card reveal">
           ${
-            item.url
-              ? `<a href="${item.url}" target="_blank" rel="noopener">`
-              : "<div>"
+            embedUrl
+              ? `
+                <div class="video-frame">
+                  <iframe
+                    src="${embedUrl}"
+                    title="${item.title}"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write;
+                      encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>`
+              : `
+                <img src="${item.image || PLACEHOLDER_IMAGE}"
+                  alt="${item.title}">
+                <p class="muted" style="padding: 0 22px;">
+                  Video link coming soon.
+                </p>`
           }
-            <img src="${item.image || PLACEHOLDER_IMAGE}" alt="${item.title}">
-            <div class="play">&#9654;</div>
-          ${item.url ? "</a>" : "</div>"}
 
           <div class="card-body">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-
-            ${
-              item.url
-                ? `<a class="btn btn-outline" href="${item.url}"
-                    target="_blank" rel="noopener">
-                    Watch video &rarr;
-                  </a>`
-                : `<p class="muted">Video link coming soon.</p>`
-            }
+            <img src="${item.image || PLACEHOLDER_IMAGE}"
+              alt="${item.title}"
+              style="border-radius: 14px; margin: 14px 0 0;">
+            <p class="caption">${item.imageCaption || ""}</p>
           </div>
-        </article>`
-    )
+        </article>`;
+    })
     .join("");
+}
+
+function convertVideoUrl(url) {
+  if (!url) return "";
+
+  const youtubeWatch = url.match(
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]+)/
+  );
+
+  if (youtubeWatch) {
+    return `https://www.youtube.com/embed/${youtubeWatch[1]}`;
+  }
+
+  const youtubeShort = url.match(/youtube\.com\/shorts\/([A-Za-z0-9_-]+)/);
+
+  if (youtubeShort) {
+    return `https://www.youtube.com/embed/${youtubeShort[1]}`;
+  }
+
+  const vimeo = url.match(/vimeo\.com\/(\d+)/);
+
+  if (vimeo) {
+    return `https://player.vimeo.com/video/${vimeo[1]}`;
+  }
+
+  return "";
 }
 
 function renderGallery(albums) {
